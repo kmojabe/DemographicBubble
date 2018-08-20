@@ -26,3 +26,23 @@ This app will consist of an interactive 2D map that allows users to select which
 * The Main majority of the screen will be the map. Users can zoom in/out and navigate the map.
 * The top of the screen will consist of a checkbox bar to select stats. Users can choose between human development, income equality, population, and gross domestic product.
 * The bottom of the screen will indicate which year these stats are from. The user can toggle the year in which they are viewing the globe.
+### Architecture and Technologies
+This project will be implemented with the following:
+* Vanilla Javascript for overall structure
+* HTML5 Canvas for DOM Manipulation and Map rendering
+* D3 to add interactivity to the Globe Object
+* Webpack to bundle and serve up various scripts
+
+In addition to the webpack entry file, other scripts involved will include:
+* `globe.js`:  this script will handle the logic for creating and updating the necessary DOM elements.
+* `country.js`: this is the individual country object to render and manipulate
+
+### Implementation Timeline
+**Over the weekend**:
+-[] create project proposal and research dynamic maps
+
+**Day 1**: Setup all necessary Node modules, including getting webpack up and running.  Create `webpack.config.js` as well as `package.json`.  Write a basic entry file and the bare bones of all 4 scripts outlined above. Learn the basics of Canvas. Goals for the day:
+-[] Get `webpack` serving files and frame out index.html
+-[] Learn enough `Canvas` and `D3` to render a map
+
+**Day 2**: Import Data from external API
