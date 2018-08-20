@@ -39,10 +39,10 @@ In addition to the webpack entry file, other scripts involved will include:
 
 ### Implementation Timeline
 **Over the weekend**:
--[ ] create project proposal and research dynamic maps
+- [ ] create project proposal and research dynamic maps
 
 **Day 1**: Setup all necessary Node modules, including getting webpack up and running.  Create `webpack.config.js` as well as `package.json`.  Write a basic entry file and the bare bones of all 4 scripts outlined above. Learn the basics of Canvas. Goals for the day:
--[ ] Get `webpack` serving files and frame out index.html
--[ ] Learn enough `Canvas` and `D3` to render a map
+- [ ] Get `webpack` serving files and frame out index.html
+- [ ] Learn enough `Canvas` and `D3` to render a map
 
 **Day 2**: Import Data from external API
