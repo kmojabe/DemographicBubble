@@ -20,3 +20,9 @@ In addition, this project will include:
 
 - [ ] Draggable Timeline bar
 - [ ] Checkbox list of different statistics
+
+### Wireframes
+This app will consist of an interactive 2D map that allows users to select which statistic they want to view and in which year. 
+* The Main majority of the screen will be the map. Users can zoom in/out and navigate the map.
+* The top of the screen will consist of a checkbox bar to select stats. Users can choose between human development, income equality, population, and gross domestic product.
+* The bottom of the screen will indicate which year these stats are from. The user can toggle the year in which they are viewing the globe.
