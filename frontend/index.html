@@ -5,7 +5,6 @@
     <title>World Visualizer</title>
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <link href="https://fonts.googleapis.com/css?family=Kosugi" rel="stylesheet">
-    <script src="https://d3js.org/d3.v5.min.js"></script>
   </head>
   <body>
     <h1>World Visualizer</h1>
@@ -16,8 +15,9 @@
         <button class="gdp-graph">gdp</button>
       </div>
     </div>
-    <svg class="svg-container" height="100" width="100">
-      <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+    <svg id="svg-container" height="100" width="100">
     </svg>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="../bundle.js"></script>
   </body>
 </html>
