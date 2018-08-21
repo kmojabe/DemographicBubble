@@ -1,0 +1,25 @@
+{
+  "name": "WorldVisualizer",
+  "version": "1.0.0",
+  "description": "World visualizer is a data visualization application that allows users to view statistics such as HDI, Gini, GDP (PPP and nominal), population, and potentially others with time. The application utilizes pixel by pixel color comparisons of nations on the map. Users will have the ability to zoom in/out on nations and focus on that countries statistics alone. There will also be a timeline on the bottom of the page to adjust statistics by time.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --mode=development --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kmojabe/WorldVisualizer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kmojabe/WorldVisualizer/issues"
+  },
+  "homepage": "https://github.com/kmojabe/WorldVisualizer#readme",
+  "dependencies": {
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0"
+  }
+}

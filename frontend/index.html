@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>World Visualizer</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link href="https://fonts.googleapis.com/css?family=Kosugi" rel="stylesheet">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+  </head>
+  <body>
+    <h1>World Visualizer</h1>
+    <div class="option-bar">
+      <h2>Compare countries by:<h2>
+      <div class="pick-button">
+        <button class="population-graph">population</button>
+        <button class="gdp-graph">gdp</button>
+      </div>
+    </div>
+    <svg class="svg-container" height="100" width="100">
+      <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+    </svg>
+  </body>
+</html>

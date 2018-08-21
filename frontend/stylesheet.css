@@ -1,0 +1,22 @@
+body{
+  background-color: lightgrey;
+  font-family: 'Kosugi', sans-serif;
+  font-style: medium;
+}
+
+.option-bar{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 20px;
+}
+
+.pick-button{
+  display: inline-block;
+  align-items: center;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+}

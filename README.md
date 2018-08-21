@@ -10,7 +10,7 @@ World visualizer is a data visualization application that allows users to view s
 
 In WorldVisualizer, users will be able to:
 
-- [ ] Interact witht the 2D map by dragging and zooming
+- [ ] Interact with the 2D map by dragging and zooming
 - [ ] See color vizualizations based on certain statistics
 - [ ] Adjust the timeline which results in a different visual map
 - [ ] Click on countries to see limited data on the country (potentiall graphs)
@@ -22,7 +22,7 @@ In addition, this project will include:
 - [ ] Checkbox list of different statistics
 
 ### Wireframes
-This app will consist of an interactive 2D map that allows users to select which statistic they want to view and in which year. 
+This app will consist of an interactive 2D map that allows users to select which statistic they want to view and in which year.
 * The Main majority of the screen will be the map. Users can zoom in/out and navigate the map.
 * The top of the screen will consist of a checkbox bar to select stats. Users can choose between human development, income equality, population, and gross domestic product.
 * The bottom of the screen will indicate which year these stats are from. The user can toggle the year in which they are viewing the globe.
