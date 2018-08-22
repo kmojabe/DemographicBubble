@@ -1,20 +1,32 @@
-import { parse_data } from './parse';
-// document.addEventListener('DOMContentLoaded', () => {
-//
-//   const root = document.getElementById('root');
-// });
+// import { parse_data } from './parse';
 import * as d3 from "d3";
+function parse_data(){
+    let yearlyPopulation = {};
+    let name = "";
+    d3.csv("../population_data/population.csv", function(obj){
+      name = obj["Country Name"];
+      delete obj["Country Name"];
+      yearlyPopulation[name] = obj;
+    });
+    return yearlyPopulation;
+}
 
-d3.select("#svg-container")
-    .append("circle")
-        .attr("cx", 50)
-        .attr("cy", 50)
-        .attr("r", 20)
-        .attr("fill", "grey");
+var svgContainer = d3.select("body").append("svg")
+                        .attr("width",1000)
+                        .attr("height",700);
 
-console.log("still here");
-d3.selectAll('h1').style('color','red');
+let data = parse_data();
 
-d3.csv("population_data/population.csv").get(function(error,data){
-  console.log(data);
-})
+var circles = svgContainer.selectAll("circle")
+                          .data(data)
+                          .enter()
+                          .append("circle");
+
+var circleAttributes = circles
+                        .attr("cx", 10)
+                        .attr("cy", 10)
+                        .attr("r", 10)
+                        .attr("fill","red");
+
+
+// console.log(Object.keys(parse_data()));
