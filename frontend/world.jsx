@@ -1,31 +1,40 @@
-// import { parse_data } from './parse';
+import { parse_data } from './parse';
 import * as d3 from "d3";
-function parse_data(){
-    let yearlyPopulation = {};
-    let name = "";
-    d3.csv("../population_data/population.csv", function(obj){
-      name = obj["Country Name"];
-      delete obj["Country Name"];
-      yearlyPopulation[name] = obj;
-    });
-    return yearlyPopulation;
-}
 
+// function doSomethingWithData(){
+//   console.log(yearlyPopulation);
+// }
+//
+// let yearlyPopulation = {};
+// let name = "";
+// let countries = [];
+// d3.csv("../population_data/population.csv", function(obj){
+//   name = obj["Country Name"];
+//   countries.push(name);
+//   delete obj["Country Name"];
+//   yearlyPopulation[name] = obj;
+//   doSomethingWithData();
+// });
+
+let sampleData = {"Belgium": {1960: "80996351", 1961: "9166764"}, "Belize": {1960: "20619075", 1961: "20953077"}, "Aruba": {1960: "1000000000", 1961: "201117"}};
+console.log(sampleData);
 var svgContainer = d3.select("body").append("svg")
                         .attr("width",1000)
-                        .attr("height",700);
-
-let data = parse_data();
+                        .attr("height",1000);
 
 var circles = svgContainer.selectAll("circle")
-                          .data(data)
+                          .data(Object.keys(sampleData))
                           .enter()
                           .append("circle");
 
 var circleAttributes = circles
-                        .attr("cx", 10)
-                        .attr("cy", 10)
-                        .attr("r", 10)
+                        .attr("cx", function(d,i) {
+                          return i*100 + 100
+                        })
+                        .attr("cy", function(d,i) {
+                          return i*100 + 100
+                        })
+                        .attr("r", function(d) {return sampleData[d]["1960"]/7500000})
                         .attr("fill","red");
 
 
