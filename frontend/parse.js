@@ -9,30 +9,29 @@ export const parse_data = () => {
     return yearlyPopulation;
 }
 
-// 
-// var svgContainer = d3.select("body").append("svg")
-//   .attr("width",1300)
-//   .attr("height",1500);
-//
-// var circles = svgContainer.selectAll("circle")
-//   .data(Object.keys(data))
-//   .enter()
-//   .append("circle");
-//
-// var circleAttributes = circles
-//   .attr("cx", function(d,i) {
-//     return i*10
-//   })
-//   .attr("cy", function(d,i) {
-//     return i*10
-//   })
-//   .attr("r", function(d) {
-//     if (data[d]["Country Name"] == "World") {
-//       console.log(data[d]);
-//       return 0;
-//     }else {
-//       return data[d]["1960"]/7500000;
-//     }
-//   })
-//   .attr("fill","red")
-//   .attr("border","1px solid black");
+// .on("mouseover", function(d) {
+//   console.log(d);
+//   let actionType;
+//   if (type === "asylum") {
+//     actionType = "came to";
+//   } else {
+//     actionType = "left";
+//   }
+//   d3.select(this).attr("fill-opacity", 1);
+//   d3.select(".infobox .ccc").text(d.code);
+//   d3.select(".infobox .yyy").text(
+//     "In " +
+//       String(targetYear) +
+//       ", " +
+//       String(d[targetYear].toLocaleString()) +
+//       " refugees " +
+//       actionType +
+//       " " +
+//       String(d.country)
+//   );
+//   d3.select(".infobox").style("visibility", "visible");
+// })
+// .on("mouseout", function(d) {
+//   d3.select(".infobox").style("visibility", "hidden");
+//   d3.select(this).attr("fill-opacity", 0.5);
+// });
