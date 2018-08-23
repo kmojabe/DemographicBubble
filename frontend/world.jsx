@@ -1,55 +1,41 @@
 import { parse_data } from './parse';
 import * as d3 from "d3";
 
-// function doSomethingWithData(){
-//   console.log(yearlyPopulation);
-// }
-
 let yearlyPopulation = {};
 let name = "";
 let countries = [];
 d3.csv("../population_data/population.csv").then(function(data){
   console.log(data);
-  var svgContainer = d3.select("body").append("svg")
-    .attr("width",1300)
-    .attr("height",1500);
 
-  var circles = svgContainer.selectAll("circle")
-    .data(Object.keys(data))
-    .enter()
-    .append("circle");
+  var canvas = d3.select("#network"),
+    width = canvas.attr("width"),
+    height = canvas.attr("height"),
+    ctx = canvas.node().getContext("2d"),
+    r = 3,
+    simulation = d3.forceSimulation()
+      .force("x", d3.forceX(width/2))
+      .force("y", d3.forceY(height/3))
+      .force("collide", d3.forceCollide(12+1))
+      .force("charge", d3.forceManyBody()
+          .strength(-5))
+      .on("tick", update);
 
-  var circleAttributes = circles
-    .attr("cx", function(d,i) {
-      return i*10
-    })
-    .attr("cy", function(d,i) {
-      return i*10
-    })
-    .attr("r", function(d) {
-      if (data[d]["Country Name"] == "World") {
-        console.log(data[d]);
-        return 0;
-      }else {
-        return data[d]["1960"]/7500000;
-      }
-    })
-    .attr("fill","red")
-    .attr("border","1px solid black");
+  simulation.nodes(data);
 
-    var simulation = d3.forceSimulation(circles)
-      .velocityDecay(0.2)
-      .force("x", d3.forceX().strength(0.002))
-      .force("y", d3.forceY().strength(0.002))
-      .force("collide", d3.forceCollide().radius(function(d) { return d.r + 0.5; }).iterations(2));
+  function update(){
+    ctx.clearRect(0,0,width,height);
 
+    ctx.beginPath();
+    data.forEach(drawNode);
+    ctx.fill();
+  }
+
+  function drawNode(d){
+    ctx.moveTo(d.x,d.y);
+    var radius = d["1960"]/7500000;
+    if (d["Country Name"] === "World"){
+      radius = 0;
+    }
+    ctx.arc(d.x, d.y, radius, 0, Math.PI*2);
+  }
 });
-
-// let sampleData = {"Belgium": {1960: "80996351", 1961: "9166764"}, "Belize": {1960: "20619075", 1961: "20953077"}, "Aruba": {1960: "1000000000", 1961: "201117"}};
-//
-// d3.selectAll("circle").transition()
-//     .duration(750)
-//     .delay(function(d, i) { return i * 10; })
-//     .attr("r", function(d) { return Math.sqrt(d * scale); });
-
-// console.log(Object.keys(parse_data()));
