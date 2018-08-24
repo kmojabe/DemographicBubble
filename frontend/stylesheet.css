@@ -1,14 +1,23 @@
+
+div .option-bar{
+  text-align: center;
+  width: 25%;
+}
+div .infobox{
+  text-align: center;
+  width: 25%;
+}
+h3 {
+  font-size: 22px;
+
+}
+div .canvas-container{
+  width: 50%;
+}
 body{
   background-color: lightgrey;
   font-family: 'Kosugi', sans-serif;
   font-style: medium;
-}
-
-.option-bar{
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin-right: 20px;
 }
 
 .pick-button{
@@ -18,5 +27,52 @@ body{
 }
 
 h1 {
+  text-align: center;
+}
+
+h3{
+  margin: 0 auto;
+}
+
+.slidecontainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#myRange {
+  width: 50%;
+}
+body {
+  background-image: url("space_background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+html {
+  height: 100%;
+  color: white;
+}
+
+.top-bar{
+  display: flex;
+  justify-content: space-around;
+}
+i{
+  font-size: 45px;
+  color: white;
+  margin-right: 10px;
+}
+#center-body{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1{
+  margin: 0 auto;
+}
+
+h3 .curr-year {
+  margin: 0 auto;
   text-align: center;
 }
