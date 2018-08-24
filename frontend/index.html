@@ -4,32 +4,35 @@
     <meta charset="utf-8">
     <title>Demographic Bubbles</title>
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    <link href="https://fonts.googleapis.com/css?family=Kosugi" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Slabo+27px" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
   </head>
   <body>
     <div class="top-bar">
-      <h1>World Visualizer</h1>
+      <h1>Demographic Bubbles</h1>
       <div class="right-side">
         <a href="https://www.linkedin.com/in/kavianmojabe/"><i class="fab fa-linkedin"></i></a>
         <a href="https://github.com/kmojabe"><i class="fab fa-github"></i></a>
       </div>
     </div>
     <div id="center-body">
-      <div class="option-bar">
-        <h2>Compare countries by:<h2>
-        <div class="pick-button">
-          <button class="population-graph">population</button>
-          <button class="gdp-graph">gdp</button>
+      <div class="infobox">
+        <!-- <div class="pick-button">
+          <h2>Compare countries by:<h2>
+          <button class="population-graph">Population</button>
+          <button class="gdp-graph">GDP</button>
+        </div> -->
+        <div class="world-population" >
+          <h3 class="w-pop"></h3>
+        </div>
+        <div>
+          <h3 class="ccc">Hover over a circle to learn more information!</h3>
+          <h3 class="ttt"></h3>
+          <h3 class="yyy"></h3>
         </div>
       </div>
       <div id="canvas-container">
         <canvas id="network" width="1000" height="650"></canvas>
-      </div>
-      <div class="infobox">
-        <h3 class="ccc">Hover over a circle to learn more information!</h3>
-        <h3 class="ttt"></h3>
-        <h3 class="yyy"></h3>
       </div>
     </div>
     <div class="slidecontainer">

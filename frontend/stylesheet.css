@@ -1,29 +1,54 @@
-
+/*
 div .option-bar{
   text-align: center;
   width: 25%;
-}
+} */
 div .infobox{
-  text-align: center;
+  text-align: left;
   width: 25%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  margin-left: 10px;
 }
+div .infobox div {
+  margin-bottom: 100px;
+  text-align: right;
+  border: 1px solid grey;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+div .infobox div button {
+  background-color: blue;
+  border: 1px solid blue;
+  border-radius: 5px;
+  color: white;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 16px;
+  padding: 7px;
+  margin: 10px;
+}
+
 h3 {
   font-size: 22px;
 
 }
 div .canvas-container{
-  width: 50%;
+  width: 75%;
+  margin-left: 20px;
 }
 body{
   background-color: lightgrey;
-  font-family: 'Kosugi', sans-serif;
-  font-style: medium;
+  font-family: 'PT Sans', sans-serif;
 }
 
 .pick-button{
   display: inline-block;
-  align-items: center;
-  margin: auto;
+}
+h3, h2{
+  margin: 0;
+  text-align: center;
 }
 
 h1 {
@@ -60,7 +85,7 @@ html {
 i{
   font-size: 45px;
   color: white;
-  margin-right: 10px;
+  margin-right: 15px;
 }
 #center-body{
   display: flex;

@@ -6,6 +6,7 @@ var prev_year = "1988";
 d3.csv("../population_data/population.csv").then(function(data){
   var timeSlider = document.getElementById("myRange");
   drawCanvas(data,timeSlider.value);
+  
   timeSlider.addEventListener('input', function(){
     let year = timeSlider.value;
 
@@ -22,10 +23,10 @@ d3.csv("../population_data/population.csv").then(function(data){
       container.appendChild(canv);
       d3.select(".infobox .ccc").text("Hover over a circle to learn more information!");
       d3.select(".infobox .yyy").text(" ");
-      // document.body.appendChild(canv);
     }
     d3.select(".curr-year").text(year);
     drawCanvas(data,year);
   })
 
 });
+//d["Country Name"] != "World"

@@ -27,7 +27,9 @@ function drawCanvas(data, year){
 
   simulation.nodes(data);
 
+
   function update(){
+
     ctx.clearRect(0,0,width,height);
 
     ctx.beginPath();
@@ -41,6 +43,7 @@ function drawCanvas(data, year){
     var radius = d[year]/7500000;
     if (d["Country Name"] === "World"){
       radius = 0;
+      d3.select(".w-pop").text("World population in " + year + ": " + d[year].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
     }
     ctx.arc(d.x, d.y, radius, 0, Math.PI*2);
     circles[d["Country Name"]] = { x: d.x, y: d.y, r: radius, year: d[year]};
