@@ -1,5 +1,7 @@
-# World Visualizer
-World visualizer is a data visualization application that allows users to view statistics such as HDI, Gini, GDP (PPP and nominal), population, and potentially others with time. The application utilizes pixel by pixel color comparisons of nations on the map. Users will have the ability to zoom in/out on nations and focus on that countries statistics alone. There will also be a timeline on the bottom of the page to adjust statistics by time.
+# Demographic Bubble
+Demographic Bubble is a data visualization application that allows users to view statistics such as population and GDP with respect to time. Each circle on the map represents a country and the radius of the circle is proportional to the country's population/GDP. There is also a timeline on the bottom of the page to adjust statistics by time.
+
+![alt text](https://github.com/kmojabe/WorldVisualizer/blob/master/population_data/Screen%20Shot%202018-08-24%20at%204.33.51%20PM.png)
 
 * The HDI and Gini stats will be represented by adjusting the colors of the nations.
 * GDP and Population stats will be represented by their relative size based on the world's total GDP/Population.
