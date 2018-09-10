@@ -2,7 +2,7 @@ import drawCanvas from './draw_canvas';
 import * as d3 from "d3";
 
 var prev_year = "1988";
-
+//how to pull csv data without server
 d3.csv("../population_data/population.csv").then(function(data){
   var timeSlider = document.getElementById("myRange");
   drawCanvas(data,timeSlider.value);
