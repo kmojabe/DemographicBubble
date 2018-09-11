@@ -1,4 +1,5 @@
 # Demographic Bubble
+[Live Version!](https://kmojabe.github.io/DemographicBubble/)
 Demographic Bubble is a data visualization application that allows users to view statistics such as population and GDP with respect to time. Each circle on the map represents a country and the radius of the circle is proportional to the country's population/GDP. There is also a timeline on the bottom of the page to adjust statistics by time.
 
 ![alt text](https://github.com/kmojabe/WorldVisualizer/blob/master/population_data/Screen%20Shot%202018-08-24%20at%204.33.51%20PM.png)
